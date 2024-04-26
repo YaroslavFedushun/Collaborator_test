@@ -10,6 +10,9 @@
     width: 90vw;
     margin: 5vh auto;
   }
+  @include responsive(400px) {
+    width: 100vw;
+  }
   &__form {
     display: flex;
     flex-direction: column;

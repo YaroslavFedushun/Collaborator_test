@@ -23,5 +23,8 @@
       width: 90vw;
       margin: 0 auto;
     }
+    @include responsive(400px) {
+      width: 100vw;
+    }
   }
 }

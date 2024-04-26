@@ -11,4 +11,8 @@
     width: 90vw;
     margin: 5vh auto;
   }
+  @include responsive(400px) {
+    width: calc(100vw - 5px);
+    margin: 5vh auto;
+  }
 }
