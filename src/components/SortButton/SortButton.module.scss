@@ -10,6 +10,7 @@ button {
   background: $white;
   text-transform: uppercase;
   font-weight: bold;
+  cursor: pointer;
 }
 
 button:not(.active):hover {
