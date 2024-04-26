@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/YaroslavFedushun/Collaborator_test/static/css/main.c90307c0.css",
+    "main.js": "/YaroslavFedushun/Collaborator_test/static/js/main.7ecd424e.js",
+    "static/media/card-logo.png": "/YaroslavFedushun/Collaborator_test/static/media/card-logo.63e6e841d58f68b445c3.png",
+    "static/media/logo.png": "/YaroslavFedushun/Collaborator_test/static/media/logo.40b1d0de1799e29e0bf4.png",
+    "index.html": "/YaroslavFedushun/Collaborator_test/index.html",
+    "main.c90307c0.css.map": "/YaroslavFedushun/Collaborator_test/static/css/main.c90307c0.css.map",
+    "main.7ecd424e.js.map": "/YaroslavFedushun/Collaborator_test/static/js/main.7ecd424e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c90307c0.css",
+    "static/js/main.7ecd424e.js"
+  ]
+}
