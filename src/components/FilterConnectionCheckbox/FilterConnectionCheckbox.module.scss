@@ -1,0 +1,17 @@
+@import '/src/assets/styles/variables';
+
+.transfers {
+  &__option {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    &:hover {
+      background: $background-light;
+    }
+    &:last-child {
+      margin-bottom: 0.5rem;
+    }
+  }
+  &__label {
+    margin-left: 0.5rem;
+  }
+}

@@ -1,0 +1,24 @@
+@import '/src/assets/styles/variables';
+
+button {
+  height: 50px;
+  border: 1px solid $border-color;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $white;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+button:not(.active):hover {
+  opacity: 0.5;
+}
+
+.active {
+  background-color: $primary-color;
+  font-weight: bold;
+  color: $white;
+  opacity: 1;
+}

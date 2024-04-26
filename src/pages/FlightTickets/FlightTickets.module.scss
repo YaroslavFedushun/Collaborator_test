@@ -1,0 +1,19 @@
+@import '/src/assets/styles/variables';
+
+.list {
+  background: $background-dark;
+  min-height: 100vh;
+
+  &__body {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  &__loadMoreBtn {
+    width: 100%;
+    height: 50px;
+    text-transform: uppercase;
+    background: $primary-color;
+    color: $white;
+    border: none;
+  }
+}
