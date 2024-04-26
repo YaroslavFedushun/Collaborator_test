@@ -45,7 +45,9 @@ const Index = () => {
 
   return (
     <div className={styles.list}>
-      <img alt={"AirLine For Europe"} src={logo} />
+      <a href={"/"}>
+        <img alt={"AirLine For Europe"} src={logo} />
+      </a>
       <div className={styles.list__body}>
         <NumberOfTransfers />
         <div>
