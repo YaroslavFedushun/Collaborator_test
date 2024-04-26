@@ -2,7 +2,8 @@ import cardLogo from "../../assets/images/card-logo.png";
 import styles from "./TransferCard.module.scss";
 import { FlightDetails } from "../../interface/FlightDetails.interface";
 
-function index({ data }: { data: FlightDetails }) {
+interface Props { data: FlightDetails }
+function index({ data }: Props) {
   return (
     <div className={styles.flightCard}>
       <div className={styles.flightCard__head}>
@@ -29,12 +30,12 @@ function index({ data }: { data: FlightDetails }) {
             </div>
             <div className={styles.flightCard__item}>
               <span className={styles.flightCard__title}>
-                {route.connections.length
-                  ? `${route.connections.length} ${route.connections.length > 1 ? 'пересадки': 'пересадка'}`
+                {route.airTransfers.length
+                  ? `${route.airTransfers.length} ${route.airTransfers.length > 1 ? 'пересадки': 'пересадка'}`
                   : "без пересадок"}
               </span>
               <span className={styles.flightCard__info}>
-                {route.connections.join(", ")}
+                {route.airTransfers.join(", ")}
               </span>
             </div>
           </div>

@@ -5,13 +5,13 @@ import { AppDispatch } from "../../store/store";
 import { SortOption } from "../../interface/Variables.interface";
 import styles from "./SortButton.module.scss";
 
-interface Params {
+interface Props {
   sort: SortOption;
   activeButton: string;
   setActiveButton: React.Dispatch<React.SetStateAction<string>>;
 }
 
-function Index({ sort, activeButton, setActiveButton }: Params) {
+function Index({ sort, activeButton, setActiveButton }: Props) {
   const dispatch = useDispatch<AppDispatch>();
   const onClick = () => {
     dispatch(setSortMethod(sort.value));

@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import logo from "../../assets/images/logo.png";
-import NumberOfTransfers from "../../components/FilterConnectionsGroup";
-import TransferCard from "../../components/TransferCard";
+import NumberOfTransfers from "../../components/FilterAirTransfersGroup";
+import FlightCard from "../../components/FlightCard";
 import Tabs from "../../components/SortButtonsGroup";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../store/store";
 import { FlightDetails } from "../../interface/FlightDetails.interface";
 import { sortFlights } from "../../utils/sortUtil";
 import { fetchFlightsData } from "../../store/reducer";
-import { filterFlightsByConnections } from "../../utils/filterUtil";
+import { filterFlightsByAirTransfers } from "../../utils/filterUtil";
 import styles from "./FlightTickets.module.scss";
 
 const Index = () => {
@@ -29,7 +29,7 @@ const Index = () => {
   }, [dispatch]);
 
   const sortAndFilterData = () => {
-    const filteredData = filterFlightsByConnections([...data], filterOption);
+    const filteredData = filterFlightsByAirTransfers([...data], filterOption);
     return sortFlights(filteredData, sortOption);
   };
 
@@ -53,7 +53,7 @@ const Index = () => {
           {filteredData
             .slice(0, maxItemsForPage)
             .map((flyPass: FlightDetails) => (
-              <TransferCard key={flyPass.id} data={flyPass} />
+              <FlightCard key={flyPass.id} data={flyPass} />
             ))}
           {filteredData.length > maxItemsForPage && (
             <button

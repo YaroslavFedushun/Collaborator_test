@@ -1,7 +1,7 @@
 export interface FlightRoute {
   route: string;
   status: string;
-  connections: string[];
+  airTransfers: string[];
   time: string;
   duration: string;
 }

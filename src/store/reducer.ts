@@ -5,7 +5,6 @@ import { AppState } from "../interface/Store.interface";
 
 const initialState: AppState = {
   flightDetails: [],
-  filteredFlights: [],
   filterOption: [],
   sortOption: "price",
   loading: false,
@@ -28,7 +27,7 @@ export const flightSlice = createSlice({
       state.sortOption = action.payload;
     },
     setFilterMethod(state, action: PayloadAction<number[]>) {
-      state.filterOption = action.payload; // Set the current filters
+      state.filterOption = action.payload;
     },
   },
   extraReducers: (builder) => {

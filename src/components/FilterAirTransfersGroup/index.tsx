@@ -1,10 +1,10 @@
 import React, { ChangeEvent, useState } from "react";
-import styles from "./FilterConnectionsGroup.module.scss";
+import styles from "./FilterAirTransfersGroup.module.scss";
 import { useDispatch } from "react-redux";
 import { setFilterMethod } from "../../store/reducer";
 import { filterOptionsVariable } from "../../utils/variables";
 import { FilterOptions } from "../../interface/Variables.interface";
-import FlightConnectionCheckbox from "../FilterConnectionCheckbox";
+import FilterAirTransferCheckbox from "../FilterAirTransferCheckbox";
 
 function Index() {
   const dispatch = useDispatch();
@@ -13,7 +13,7 @@ function Index() {
     dispatch(setFilterMethod(filterOptions));
   }, [dispatch, filterOptions]);
 
-  const handleFilterTransfer = (
+  const handleFilter = (
     e: ChangeEvent<HTMLInputElement>,
     value: number,
   ) => {
@@ -29,10 +29,10 @@ function Index() {
       <form className={styles.transfers__form}>
         <span className={styles.transfers__title}>кількість пересадок</span>
         {filterOptionsVariable.map((option: FilterOptions) => (
-          <FlightConnectionCheckbox
+          <FilterAirTransferCheckbox
             key={option.value}
             option={option}
-            handleFilterTransfer={handleFilterTransfer}
+            handleFilter={handleFilter}
           />
         ))}
       </form>

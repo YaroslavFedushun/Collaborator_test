@@ -29,8 +29,8 @@ export const sortByOptimal = (data: FlightDetails[]) => {
     const totalTimeA = getTotalFlightTime([a.from, a.to]);
     const totalTimeB = getTotalFlightTime([b.from, b.to]);
     if (totalTimeA === totalTimeB) {
-      const stopsA = a.from.connections.length + a.to.connections.length;
-      const stopsB = b.from.connections.length + b.to.connections.length;
+      const stopsA = a.from.airTransfers.length + a.to.airTransfers.length;
+      const stopsB = b.from.airTransfers.length + b.to.airTransfers.length;
       if (stopsA === stopsB) {
         return a.price - b.price;
       }

@@ -1,21 +1,19 @@
 import React, { ChangeEvent } from "react";
-import styles from "./FilterConnectionCheckbox.module.scss";
+import styles from "./FilterAirTransferCheckbox.module.scss";
 import { FilterOptions } from "../../interface/Variables.interface";
 
-function Index({
-  option,
-  handleFilterTransfer,
-}: {
+interface Props {
   option: FilterOptions;
-  handleFilterTransfer: any;
-}) {
+  handleFilter: (e:ChangeEvent<HTMLInputElement>, val: number) => void;
+}
+function Index({ option, handleFilter}: Props ) {
   return (
     <div key={option.title} className={styles.transfers__option}>
       <input
         id={option.title}
         type="checkbox"
         onChange={(e: ChangeEvent<HTMLInputElement>) =>
-          handleFilterTransfer(e, option.value)
+          handleFilter(e, option.value)
         }
       />
       <label htmlFor={option.title} className={styles.transfers__label}>

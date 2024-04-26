@@ -1,6 +1,6 @@
 import { FlightDetails } from "../interface/FlightDetails.interface";
 
-export const filterFlightsByConnections = (
+export const filterFlightsByAirTransfers = (
   data: FlightDetails[],
   stopsFilter: number[],
 ) => {
@@ -9,7 +9,7 @@ export const filterFlightsByConnections = (
   } else {
     return data.filter((flight) => {
       const maxStops = [flight.from, flight.to].reduce(
-        (max, route) => Math.max(max, route.connections.length),
+        (max, route) => Math.max(max, route.airTransfers.length),
         0,
       );
       return stopsFilter.includes(maxStops);
